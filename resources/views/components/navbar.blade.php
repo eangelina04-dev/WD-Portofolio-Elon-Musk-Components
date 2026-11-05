@@ -3,7 +3,6 @@
         ['label' => 'Home',    'route' => 'home'],
         ['label' => 'About',   'route' => 'about'],
         ['label' => 'Blog',    'route' => 'blog'],
-        ['label' => 'Contact', 'route' => 'contact'],
     ];
 @endphp
 

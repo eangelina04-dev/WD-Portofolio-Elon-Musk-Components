@@ -1,24 +1,3 @@
-@php
-    $profile = [
-        'Nama lengkap'    => 'Elon Reeve Musk',
-        'Lahir'           => '28 Juni 1971, Pretoria, Afrika Selatan',
-        'Kewarganegaraan' => 'Amerika Serikat (sebelumnya Afrika Selatan dan Kanada)',
-        'Pendidikan'      => 'University of Pennsylvania, Fisika (dan Ekonomi)',
-    ];
-
-    $timeline = [
-        ['year' => '1995', 'event' => 'Mendirikan Zip2 (software peta dan direktori bisnis)'],
-        ['year' => '1999', 'event' => 'Mendirikan X.com, yang kemudian menjadi PayPal'],
-        ['year' => '2002', 'event' => 'PayPal dibeli eBay; Musk mendirikan SpaceX'],
-        ['year' => '2004', 'event' => 'Masuk Tesla sebagai investor dan chairman'],
-        ['year' => '2008', 'event' => 'Menjadi CEO Tesla'],
-        ['year' => '2012', 'event' => 'Dragon milik SpaceX menjadi pesawat swasta pertama yang bersandar di ISS'],
-        ['year' => '2016', 'event' => 'Mendirikan Neuralink dan The Boring Company'],
-        ['year' => '2022', 'event' => 'Mengakuisisi Twitter, lalu mengganti namanya menjadi X'],
-        ['year' => '2023', 'event' => 'Mendirikan xAI'],
-    ];
-@endphp
-
 <x-layout title="About - Elon Musk">
     <div class="container-page space-y-12 py-12">
 
@@ -29,7 +8,7 @@
             <div class="card md:col-span-2">
                 <h1 class="section-title">Tentang Elon Musk</h1>
                 <dl class="space-y-3">
-                    @foreach ($profile as $label => $value)
+                    @foreach ($profil as $label => $value)
                         <div>
                             <dt class="text-sm text-slate-500">{{ $label }}</dt>
                             <dd class="font-medium">{{ $value }}</dd>
@@ -55,8 +34,8 @@
             <ol class="space-y-6 border-l-2 border-sky-400 pl-6">
                 @foreach ($timeline as $item)
                     <li>
-                        <span class="font-bold text-sky-600">{{ $item['year'] }}</span>
-                        <p>{{ $item['event'] }}</p>
+                        <span class="font-bold text-sky-600">{{ $item['tahun'] }}</span>
+                        <p>{{ $item['peristiwa'] }}</p>
                     </li>
                 @endforeach
             </ol>

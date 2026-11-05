@@ -1,12 +1,3 @@
-@php
-    $companies = [
-        ['name' => 'Tesla',     'desc' => 'Mobil listrik dan penyimpanan energi'],
-        ['name' => 'SpaceX',    'desc' => 'Roket dan satelit'],
-        ['name' => 'Neuralink', 'desc' => 'Chip otak untuk membantu penderita gangguan saraf'],
-        ['name' => 'xAI',       'desc' => 'Pengembangan AI (Grok)'],
-    ];
-@endphp
-
 <x-layout title="Home - Elon Musk">
 
     {{-- Hero --}}
@@ -33,9 +24,9 @@
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ($companies as $company)
                 <div class="card">
-                    <x-image-slot class="mb-4 h-28 rounded-lg" :label="'Logo ' . $company['name']" />
-                    <h3 class="text-lg font-semibold">{{ $company['name'] }}</h3>
-                    <p class="mt-1 text-sm text-slate-600">{{ $company['desc'] }}</p>
+                    <x-image-slot class="mb-4 h-28 rounded-lg" :label="'Logo ' . $company['nama']" />
+                    <h3 class="text-lg font-semibold">{{ $company['nama'] }}</h3>
+                    <p class="mt-1 text-sm text-slate-600">{{ $company['deskripsi'] }}</p>
                 </div>
             @endforeach
         </div>
