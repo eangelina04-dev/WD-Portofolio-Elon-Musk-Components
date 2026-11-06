@@ -3,7 +3,7 @@
 
         {{-- Data diri --}}
         <section class="grid gap-8 md:grid-cols-3">
-            <x-image-slot class="h-64 rounded-xl md:col-span-1" label="Foto profil" />
+            <x-image-slot src="images/elon-profile.jpg" class="h-64 rounded-xl md:col-span-1" label="Foto profil" />
 
             <div class="card md:col-span-2">
                 <h1 class="section-title">Tentang Elon Musk</h1>

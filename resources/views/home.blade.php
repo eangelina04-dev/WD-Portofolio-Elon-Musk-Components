@@ -13,7 +13,7 @@
                     planet lain dan mempercepat peralihan dunia ke energi berkelanjutan.
                 </p>
             </div>
-            <x-image-slot class="h-72 rounded-xl" label="Foto utama" />
+            <x-image-slot src="images/elon-hero.jpg" label="Elon Musk" class="h-72 rounded-xl" />
         </div>
     </section>
 
@@ -24,7 +24,11 @@
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ($companies as $company)
                 <div class="card">
-                    <x-image-slot class="mb-4 h-28 rounded-lg" :label="'Logo ' . $company['nama']" />
+                    <x-image-slot
+                        :src="$company['gambar'] ?? null"
+                        :alt="'Logo ' . $company['nama']"
+                        :label="'Logo ' . $company['nama']"
+                        class="mb-4 h-28 rounded-lg" />
                     <h3 class="text-lg font-semibold">{{ $company['nama'] }}</h3>
                     <p class="mt-1 text-sm text-slate-600">{{ $company['deskripsi'] }}</p>
                 </div>
